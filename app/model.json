@@ -1,6 +1,6 @@
 {
     "application": {
-        "title": "RE MOSA2 Friend Tracker (FS2025)",
+        "title": "RE MOSA Friend SuperTracker (FS2025)",
         "formList": [
             {
                 "id": "FriendForm",
@@ -19,6 +19,13 @@
                         "type": "text",
                         "name": "FirstName",
                         "width": 1,
+                        "required": true
+                    },
+                    {
+                        "id": "nickname",
+                        "type": "text",
+                        "name": "Nickname",
+                        "width": 2,
                         "required": true
                     },
                     {
@@ -131,6 +138,13 @@
                         "icon": "fa-cubes",
                         "color": "yellow",
                         "page": "locationspage"
+                    },
+                    {
+                        "type": "button",
+                        "name": "Group",
+                        "icon": "fa-yin-yang",
+                        "color": "teal",
+                        "page": "groupspage"
                     }
                 ]
             },
@@ -157,6 +171,33 @@
                         "url": "/friend",
                         "form": {
                             "form": "FriendForm"
+                        }
+                    }
+                ]
+            },
+            {
+                "id": "groupspage",
+                "elementList": [
+                    {
+                        "type": "backbutton"
+                    },
+                    {
+                        "type": "newButton",
+                        "name": "NewGroup",
+                        "icon": "fa-yin-yang",
+                        "color": "teal",
+                        "form": {
+                            "form": "GroupForm"
+                        }
+                    },
+                    {
+                        "type": "list",
+                        "icon": "fa-yin-yang",
+                        "color": "blue",
+                        "search": true,
+                        "url": "/group",
+                        "form": {
+                            "form": "GroupForm"
                         }
                     }
                 ]
